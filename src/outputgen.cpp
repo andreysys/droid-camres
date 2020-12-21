@@ -71,6 +71,7 @@ void OutputGen::makeJson(const QList<QPair<QString, int> > &cameras,
     {
         if (resolutions.at(i).isEmpty())
         {
+            qWarning("Camres warning: No resolutions found for %s (%d): Configuration not set.", qPrintable(cameras.at(i).first), cameras.at(i).second);
             continue;
         }
 
@@ -162,6 +163,7 @@ void OutputGen::makeCamhw(const QList<QPair<QString, int> > &cameras,
     {
         if (resolutions.at(i).isEmpty())
         {
+            qWarning("Camres warning: No resolutions found for %s (%d): Configuration not set.", qPrintable(cameras.at(i).first), cameras.at(i).second);
             continue;
         }
 

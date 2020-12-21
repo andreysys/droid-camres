@@ -90,8 +90,6 @@ int main(int argc, char *argv[])
     {
         qInfo("Searching resolutions for %s...", qPrintable(cameras.at(i).first));
         QList<QPair<QString, QStringList> > res = cr.getResolutions(cameras.at(i).second, caps);
-        if (res.isEmpty())
-            return EXIT_FAILURE;
 
         resolutions.append(res);
     }
